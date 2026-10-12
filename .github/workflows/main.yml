@@ -18,6 +18,10 @@ jobs:
        pip install
        build
        --user
+     # distフォルダを削除する
+   - name: Clean dist
+     run: rm -rf dist/
+
    - name: Build a binary wheel and a source tarball
      run: >-
        python -m
